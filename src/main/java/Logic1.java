@@ -84,7 +84,7 @@ public class Logic1
     old35(10) --> true
     old35(15) --> false */
     public boolean old35(int n) {
-     return (n % 3 == 0 && n % 5 != 0); //repeat
+     return (n % 3 == 0 && n % 5 != 0) || (n % 5 == 0 && n % 3 != 0); //DONE
     }
 
 
@@ -96,7 +96,7 @@ public class Logic1
     specialEleven(23) --> true
     specialEleven(24) --> false */
     public boolean specialEleven(int n) {
-      return (n % 11 == 0); //repeat w 1
+      return (n % 11 == 0) || (n % 1 == 0); //DONE
     }
 
 
@@ -106,7 +106,7 @@ public class Logic1
     more20(21) --> true
     more20(42) --> true */
     public boolean more20(int n) {
-      return (n % 20 == 1); //repeat w 2
+      return (n % 20 == 1) || (n % 2 == 2); //DONE
     }
 
 
@@ -425,7 +425,7 @@ public class Logic1
      if (n % 3 == 0 && n % 5 == 0) {
          return "FizzBuzz";
      }
-     return int + "!";
+     return n + "!";
     }
 
     /*When squirrels get together for a party, they like to have sodas. 
