@@ -118,7 +118,7 @@ public class Logic1
     less20(59) --> true
     less20(20) --> false */
     public boolean less20(int n) {
-      return (n % 20 == 18); // repeat with 19
+      return (n % 20 == 18) || (n % 20 == 19); // DONE
     }
 
     /*Given a non-negative number "num", return true if num is within 2 of a multiple of 10. 
@@ -129,7 +129,9 @@ public class Logic1
     nearTen(17) --> false
     nearTen(19) --> true */
     public boolean nearTen(int num) {
-      int remainder;
+      int remainder = num % 10;
+      
+      return remainder <= 2 || remainder >= 8;
     }
 
 
@@ -197,7 +199,7 @@ public class Logic1
     love6(4, 5) --> false
     love6(1, 5) --> true */
     public boolean love6(int a, int b) {
-      
+      return a == 6 || b == 6 || a + b == 6 || Math.abs(a - b) == 6;
     }
 
 
